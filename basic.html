@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Jegal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="static/images/logo.png" class="logo">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Data Scientist, Tech Educator</p>
+            <h1>Hello, I am<br><span>Min Jegal</span></h1>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/min-jegal-9507a4232/" target="_blank">
+                <i class="devicon-linkedin-plain colored"></i>
+            </a>
+            <a href="https://github.com/gaallmin" target="_blank">
+                <i class="devicon-github-original colored"></i>
+            </a>
+            <a href="#" onclick="copyEmail(event)">
+                <img src="/static/images/mail.png" alt="Email" class="email-icon">
+            </a>
+        </div>
+        <div id="success-message-box" class="message-box" style="display: none;">
+            Email successfully copied! Thank you😄
+        </div>        
+    </div>
+</div>
+<!------------ ABOUT ----------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="/static/images/image.jpg" class="about-img">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="introduction">
+                    Hello, I am Min Jegal, a Data Scientist and Tech Educator. 
+                    I am passionate about discovering diverse insights from data and sharing them with people to make a better world.<br>
+                    I am interested in reducing inequality by utilizing AI and Data Science.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                </div>
+                <div class="tab-contents active-tab" id="Education">
+                    <ul>
+                        <li><span>Kongju National University</span><br>Computer Education, Applied Mathematics</li>
+                        <li><span>Universidad Carlos III de Madrid</span><br>Data Science and Engineering</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span class="company">OUTTA</span><br><span class="title">Chief Operative Officer, Deep Learning Mentor</span><br>2022-Current</li>
+                        <li><span class="company">AI Playground</span><br><span class="title">Founder</span><br>2024-Current</li>
+                        <li><span class="company">Private Tutor</span><br><span class="title">Python Private Tutor</span><br>2023-2024</li>
+                        <li><span class="company">Brebuf College, Toronto Catholic District School Board</span><br><span class="title">Computer Science (Technology) Department Intern Teacher</span><br>2023</li>
+                        <li><span class="company">The Ankh</span><br><span class="title">Data Analyst</span><br>2021-2023</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Skills">
+                    <ul>
+                        <li><span>Technical Skills</span><br>
+                            <i class="devicon-python-plain"></i> Python<br>
+                            <i class="devicon-pytorch-plain-wordmark"></i> Pytorch<br>
+                            <i class="devicon-pandas-plain"></i> Pandas<br>
+                            <i class="devicon-numpy-plain-wordmark"></i> Numpy<br>
+                            <i class="devicon-streamlit-plain-wordmark"></i> Streamlit<br>
+                            <i class="devicon-cplusplus-plain"></i> C++<br>
+                            <i class="devicon-azuresqldatabase-plain colored"></i> SQL<br>
+                        </li>
+                        <li><span>Leadership</span></li>
+                        <li><span>Marketing, Communication</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------ CV ----------------->
+<div id="cv">
+    <h1 class="sub-title">Curriculum Vitae (CV)</h1>
+    <iframe src="static/Min_Jegal_CV.pdf" width="100%" height="600px"></iframe>
+</div>
+
+<!--Java for the email sec-->
+<script>
+    function copyEmail(event) {
+        event.preventDefault(); // Prevent default link behavior
+        const email = 'minjegal.ds@gmail.com';
+        navigator.clipboard.writeText(email).then(function() {
+            var successMessageBox = document.getElementById('success-message-box');
+            successMessageBox.style.display = 'block';
+            setTimeout(function() {
+                successMessageBox.style.display = 'none';
+            }, 2000); // Hide the message after 2 seconds
+        }, function(err) {
+            console.error('Could not copy email: ', err);
+        });
+    }
+</script>
+
+
+<!--Java for the about sec-->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+</body>
+</html>
