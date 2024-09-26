@@ -20,66 +20,318 @@
             <ul>
                 <li><a href="basic.html#about">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="basic.html#cv">CV</a></li>
             </ul>
         </nav>
     </header>
 <!--Job descrption-->
 <div id="role">
+    <div class="intro-project">Projects</div>
     <div class="containerForRole">
         <div class="boxWdesc">
+            <!-- Data Science Section -->
             <div class="box">
                 <div class="title">Data Science</div>
                 <div class="description">
-                    <img src="/static/images/data-science.PNG" alt="data-science">
-                    <p>I am passionate about providing personalized services and analysis <br> by utilizing Data and Deep Learning Models</p>
-                    <a href ="#data-science">> Click here to check more of my projects</a>
+                    <div class="desc-container">
+                        <div class="gif">
+                            <iframe src="https://giphy.com/embed/dtB7kgF86VwZWY5Iee" frameBorder="0" class="giphy-embed"></iframe>
+                        </div>
+                        <div class="desc-text">
+                            <p>I am passionate about providing personalized services and analysis by utilizing Data and Deep Learning Models</p>
+                            <a href ="#data-science-section">> Click here to check more of my projects</a>
+                            
+                            <!-- Moved extraDesc content here -->
+                            <div class="extraDesc">
+                                <p id="titleD">I have done projects on</p>
+                                <ul>
+                                    <li>Sketch Illustration Search Service</li>
+                                    <li>Playlist Recommendation System</li>
+                                    <li>Course Recommendation System for Students</li>
+                                </ul>
+                                <a href ="#data-science-section">and More</a>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="extraDesc">
-                <p id="titleD">I have doen projects on</p>
-                <ul>
-                    <li>Sketch Illustration Search Service</li>
-                    <li>Playlist Recommendation System</li>
-                    <li>Course Recommendation System for Students</li>
-                </ul>
-                <a href ="#data-science">and More</a>
-
-            </div>
         </div>
-
+        
         <div class="boxWdesc">
+            <!-- Tech Educator Section -->
             <div class="box">
                 <div class="title">Tech Educator</div>
                 <div class="description">
-                    <img src="/static/images/teaching.PNG" alt="teaching">
-                    <p>My passion for leveraging to address critical issues in education<br> led me to be devoted to providing Tech Education</p>
-                    <a href="#tech-edu">> Click here to check more of my works</a>
-                </div>
-            </div>
-            <div class="extraDesc">
-                <div class="textDesc">
-                    <p id="titleD">With my Passion</p>
-                    <ul>
-                        <li>Founded AI playground, an AI Education NGO</li>
-                        <li>Chief Operating Officer at OUTTA, an AI Education NGO</li>
-                        <li>Machine Learning Mentor at OUTTA AI bootcamp</li>
-                    </ul>
-                    <a href="#tech-edu">and More</a>
+                    <div class="desc-container">
+                        <div class="gif">
+                            <iframe src="https://giphy.com/embed/lQPHNPMPZ7tcIwseGn"  frameBorder="0" class="giphy-embed"></iframe>
+                        </div>
+                        <div class="desc-text">
+                            <p>My passion for leveraging to address critical issues in education led me to be devoted to providing Tech Education</p>
+                            <a href="#tech-edu-section">> Click here to check more of my works</a>
+                            
+                            <!-- Moved extraDesc content here -->
+                            <div class="extraDesc">
+                                <p id="titleD">With my Passion</p>
+                                <ul>
+                                    <li>Founded AI playground, an AI Education NGO</li>
+                                    <li>Chief Operating Officer at OUTTA, an AI Education NGO</li>
+                                    <li>Machine Learning Mentor at OUTTA AI bootcamp</li>
+                                </ul>
+                                <a href="#tech-edu-section">and More</a>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="detailed-projects">
-    <div class="data-science">
-    <h1>My work in <span>Data Science Area</h1>
-        
-    </div>
 
+
+<div id="detailed-projects">
+    <div class="intro-detailed-project">Detailed Projects</div>
+    <p id="project-instructions">Click the toggle to look up on my projects. When you click the box, you will be guided to the related page😃 </p>
+    <div class="data-science">
+        <h1 id="data-science-section">My work in <span>Data Science</span></h1>
+        <p class="proj-summary">Passionate about leveraging data to drive innovation, lead international projects, and harness big data technologies for strategic decision-making.</p>
+        <ul class="proj-summary-bullet">
+            <!--ML/AI project-->
+            <li>
+                <details class="proj-bullet-content">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="project-title">Advanced Machine Learning and AI</span>
+                            <span class="project-description">Developed and optimized ML models for image classification and recommendation systems, achieving top placements in national hackathons.</span>
+                        </div>
+                    </summary>
+                        <!---Git project addition-->
+                    <div class="proj-desc">
+                        <h4>Data Science Projects</h4>
+                        <div class="proj-list">
+
+                            <div class="proj-box">
+                                <a href="https://github.com/gaallmin/Interest-seeker-Service" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title">Interest Seeker Service</span>
+                                    <span class="proj-link-desc">Recommendation system which is able to recommend occupation, skill, abilities, knowledge and related Coursera courses based on a student's personal interest.</span>
+                                    <span class="proj-skill">Applied Technologies: NLP, BERT, Collaborative Recommendation System, API Data Collection</span>
+                                </a>
+                            </div>
+                        
+                            <div class="proj-box">
+                                <a href="https://github.com/gaallmin/AI-Powered-Sketch-Illustration-Search-Service-for-Designers" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title">Sketch Image Classification System</span>
+                                    <span class="proj-link-desc"> AI service for efficiently searching sketch illustrations, supporting designers in the growing design industry.</span>
+                                    <span class="proj-skill">Applied Technologies: CNN(VGG, ResNet), Data Augmentation, Agglomerative Clustering, DBSCAN</span>
+                                </a>
+                            </div>
+                        
+                            <div class="proj-box">
+                                <a href="https://github.com/gaallmin/Spotify-Playlist-Song-Recommendation-System-and-Dashboard" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title">Playlist - Song Recommendation System</span>
+                                    <span class="proj-link-desc">Recommendation system which is able to recommend songs for playlists based on songs' Lyrics and Genre in the playlist.</span>
+                                    <span class="proj-skill">Applied Technologies: NLP, Collaborative Recommendation System, KNN, Optimisation, API Data Collection, Python Dash</span>
+                                </a>
+                            </div>
+                        
+                            <div class="proj-box">
+                                <a href="https://github.com/gaallmin/Optimizing-Christmas-Using-Non-Linear-Model" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title">Optimising Christmas Festivity</span>
+                                    <span class="proj-link-desc">Optimisation of the tour route of Santa Claus and the pricings of Tree</span>
+                                    <span class="proj-skill">Applied Technologies: Non-Linear Optimisation, Graph Theory, MTZ constraints</span>
+                                </a>
+                            </div>
+                        
+                            <div class="proj-box">
+                                <a href="https://github.com/gaallmin/Data-Collection-Proj-for-AI-TA-Dev" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title">Data Collection: Establishing Ethical Guideline for building AI tutors</span>
+                                    <span class="proj-link-desc">Survey system built to collect user's response over ethical attitude of AI tutors</span>
+                                    <span class="proj-skill">Applied Technologies: SQL, Streamlit, Data Collection, Data Pipeline</span>
+                                </a>
+                            </div>
+                        
+                            <div class="proj-box">
+                                <a href="https://github.com/gaallmin/Wine-Quality-Analyzation-by-R" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title">Wine Quality Analysis</span>
+                                    <span class="proj-link-desc">Determined factors that affect wine quality the most and the difference between the factors in types of wines</span>
+                                    <span class="proj-skill">Applied Technologies: R, Random Forest, SVM, Linear Regression, Data Analysis</span>
+                                </a>
+                            </div>
+                        
+                            <div class="proj-box">
+                                <a href="https://github.com/gaallmin/Grammar-Checker-For-Education-Purpose-2022-" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title">Grammar Checker For Educational Purpose</span>
+                                    <span class="proj-link-desc">Checks grammatically error in English writing and suggests the explanation of the error</span>
+                                    <span class="proj-skill">Applied Technologies: NLP, Web Data Crawling</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                        
+                </details>
+            </li>
+
+            <li>
+                <!--Leadership-->
+                <details class="proj-bullet-content">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="project-title">Leadership in International Projects</span>
+                            <span class="project-description">Led global teams in Spain, and across South Korea, and the US, driving data-driven initiatives that increased user satisfaction by 20% and attracted over 900 applicants.</span>
+                        </div>
+                    </summary>
+                        <!--related link-->
+                    <div class="proj-desc">
+                        <h4>Leadership Projects Projects</h4>
+                        <div class="proj-list">
+
+                            <div class="proj-box">
+                                <a href="https://ai-playground-theta.vercel.app" target="_blank" rel="noopener noreferrer">
+                                    <div class="proj-content-wrapper">
+                                        <span class="proj-title">AI Playground</span>
+                                        <span class="proj-link-desc">Enjoy The True AI; Play, Absorb, and Succeed</span>
+                                        <span class="proj-skill">Initiated an NGO for young age AI education with easy and intuitive educational material</span>
+                                        <ul class="proj-list-desc">
+                                            <li>Spearheaded the creation of an AI learning game platform for young learners, wrote detailed product 
+                                                requirement documents (PRDs)</li>
+                                            <li>Recruited 10 team members, continuously managing the project timeline</li>
+                                            <li>Leading external relationship building, branding efforts, and funding initiatives</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="proj-box">
+                                <a href="https://outta.ai/en" target="_blank" rel="noopener noreferrer">
+                                    <div class="proj-content-wrapper">
+                                        <span class="proj-title">OUTTA</span>
+                                        <span class="proj-link-desc">Make A Difference</span>
+                                        <span class="proj-skill">Worked as a Chief Operative Officer, in a social impact NGO making approachable AI education to everyone</span>
+                                        <ul class="proj-list-desc">
+                                            <li>Developed detailed product requirements and defined a Minimum Viable Product (MVP) for a new AI boot camp module, collaborating with stakeholders to ensure alignment with educational goals</li>
+                                            <li>Led data-driven advertisement campaigns using Google Ads and social media platforms; optimized ads with A/B testing, attracting 900+ applicants in two weeks</li>
+                                            <li>Analyzed internal boot camp data to identify areas of improvement, resulting in a 20% increase in user satisfaction and course completion rates</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </details>
+            </li>
+
+            <!--data base-->
+            <li>
+                <!--Leadership-->
+                <details class="proj-bullet-content">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="project-title">Big Data & Cloud Proficiency</span>
+                            <span class="project-description">Capable of engineering scalable data pipelines using AWS, and Google Cloud, enabling efficient data processing and strategic business insights.</span>
+                        </div>
+                    </summary>
+                        <!--related link-->
+                    <div class="proj-desc">
+                        <h4>Data Management Skills</h4>
+                        <div class="proj-list">
+                            <div class="proj-box">
+                                <ul class = "proj-list-desc">
+                                    <li>Certified in Google Cloud Data Analytics</li>
+                                    <li>Expected to be a AWS Certified Cloud Practitioner</li>
+                                </ul>
+                                
+                            </div>
+
+                        </div>
+                    </div>      
+                </details>
+            </li>
+        </ul>
+    </div>
+    
+    
     <div class="tech-edu">
+        <h1 id="tech-edu-section">My work in <span>Tech Education</span></h1>
+        <p class="proj-summary">From redefining traditional success to co-founding a global AI education initiative, I am dedicated to empowering individuals through technology education and using AI to drive social change.</p>
+        <ul class="proj-summary-bullet">
+            <!--NGO project-->
+            <li>
+                <details class="proj-bullet-content">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="project-title">Initiating NGO</span>
+                            <span class="project-description">With a purpose for developing easy, intuitive AI education environment, founded an NGO for young students and worked as a COO at an NGO, OUTTA</span>
+                        </div>
+                    </summary>
+                    <div class="proj-desc">
+                        <div class="proj-list">
+
+                            <div class="proj-box">
+                                <a href="https://ai-playground-theta.vercel.app" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title"><i class="fab fa-github"></i> Founder of AI Playground</span>
+                                    <ul class="proj-list-desc">
+                                        <li>Led a team of 4 people specialized in Pedagogy and 3 people with expertise in AI and IT Development</li>
+                                        <li>Developed easy and intuitive course materials on SVM, Decision Trees, and Regression</li>
+                                        <li>Collaborated in developing web-based games and video-based educational materials</li>
+                                    </ul>
+                                </a>
+                            </div>
+                        
+                            <div class="proj-box">
+                                <a href="https://outta.ai/en" target="_blank" rel="noopener noreferrer">
+                                    <span class="proj-title"><i class="fab fa-github"></i> Machine Learning Mentor and COO at OUTTA</span>
+                                    <ul class="proj-list-desc">
+                                        <li>Taught 300 people the concepts of Neural Networks at OUTTA Bootcamp, Machine Learning Track</li>
+                                        <li>Developed and implemented courses in diverse educational environments such as the Metaverse, Google Classroom, and 1:1 Live Meetings</li>
+                                    </ul>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </details>                        
+            </li>
+
+            <li>
+                <details class="proj-bullet-content">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="project-title">Interacting with Students</span>
+                            <span class="project-description">In a purpose of reinforcing my ability to communicate complex technical concepts effectively, I did my internship at a school in Canada and have been teaching students through tutoring </span>
+                        </div>
+                    </summary>
+                    <div class="proj-desc">
+                        <div class="proj-list">
+
+                            <div class="proj-box">
+                                <span class="proj-title">Computer Science (Technology) Department Intern Teacher</span>
+                                <ul class="proj-list-desc">
+                                    <li>Conducted teaching of grade 9-12 students focused on Python, Physical Computing, and Algorithms at Brebeuf College</li>
+                                    <li>Served as a mentor at the AngelHack 3.0 Toronto hackathon, hosted by Hack Club</li>
+                                </ul>
+                            </div>
+                
+                            <div class="proj-box">
+                                <span class="proj-title">Private Tutoring</span>
+                                <ul class="proj-list-desc">
+                                    <li>Created comprehensive and engaging teaching materials tailored to the learning needs of students aged between 12-17 years old</li>
+                                    <li>Taught fundamental Python with Pygame, Streamlit Package, and data visualization with PyPlot</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </details>                        
+            </li>
+        </ul>
+
 
 
     </div>

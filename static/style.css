@@ -70,10 +70,11 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
-.profile-pic {
+.profile-pic, .about-img {
     width: 600px;
     height: auto;
-    margin-right: 150px;
+    margin: -40px 150px 0px 0px;
+    position: relative;
 }
 
 .intro {
@@ -154,24 +155,29 @@ h1 span {
 #about{
     padding:80px 0;
     color:#F1C40F;
-    background-color: #080808;
+    background-color: #E9F1F7;
 }
 
 .row{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; 
 }
 
 .about-col-1{
-    flex-basis: 35%;
-    flex-shrink: 0;
+    margin-left: 10em;
+    margin-top: 8em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .about-col-1.img{
     width: 100%;
-    height: auto; 
+    height: auto;
+    margin-left: auto;
     border-radius: 15px;
 }
 
@@ -194,22 +200,31 @@ h1 span {
 
 .introduction {
     margin-top: 20px;
-    margin-left: 4em; 
-    color: #fff; 
-    font-size: 18px; 
-    line-height: 1.5; 
+    margin-left: 3em; 
+    color: #000000; 
+    font-size: 22px; 
+    line-height: 1.5;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 900px; 
 }
 
 .tab-titles{
     display: flex;
     justify-content: flex-start;
-    margin: 40px 0 40px;
+    margin: 10px 0 0px;
+    padding-bottom: 0px !important; 
     padding-left: 4em;
+}
+
+.tab-contents{
+    display: none;
+    margin-top: 5px;
 }
 
 .tab-links{
     margin-right: 50px;
-    font-size: 24px;
+    font-size: 35px;
     font-weight:500;
     cursor: pointer;
     position: relative;
@@ -230,32 +245,141 @@ h1 span {
     width: 50%
 }
 
-.tab-contents ul li{
-    padding-left: 4em;
-    padding-top: 0.5em;
-    list-style:none;
-    margin: 10px 0;
+/* Education Tab Specific Styling */
+.education-content ul li {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    list-style: none;
 }
 
-.tab-contents ul li span{
-    font-weight: 500;
-    color: #fff;
-    font-size: 16px;
+.uni-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.tab-contents i {
-    margin-right: 10px; /* Space between icon and text */
-    font-size: 24px; /* Adjust the icon size */
-    color: #F1C40F; /* Icon color */
+.school {
+    color: #f1c40f; /* Gold for the university name */
+    font-weight: bold; /* Make it bold */
+    font-size: 25px; /* Adjust font size if needed */
+    margin-bottom: 10px;
+}
+
+/* Styling for Degree/Field of Study */
+.degree {
+    color: #000000; /* White for the degree or field of study */
+    font-size: 20px; /* Slightly smaller font size */
+    margin-bottom: 20px;
+}
+
+/* Experience Tab Specific Styling */
+.experience-content ul li {
+    padding-left: 30px;
+    list-style: none;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.experience-item .date {
+    color: #623CEA;
+    font-size: 18px;
+    line-height: 1.2;
+    
+}
+
+.experience-item .company {
+    font-weight: bold;
+    color: #f1c40f;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.experience-item .title {
+    font-weight: normal;
+    color: #000000;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 45px;
 }
 
 
+/* Skills Tab Specific Styling */
+.skills-category {
+    margin-bottom: 40px; 
+    padding: 0em 0em 0em 6em;
+}
+
+.skills-category h2 {
+    color: #379777; 
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1c40f;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skills-list {
+    display: flex;
+    padding-left: 2em;
+    flex-wrap: wrap;
+    gap: 20px; 
+    max-width: 550px;
+}
+
+.skill-item {
+    flex-basis: calc(50% - 20px);
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon, name, and bar */
+}
+
+.skill-item i {
+    font-size: 30px;
+    color: #000000; /* Consistent icon color */
+    flex-shrink: 0;
+}
+
+.skill-name {
+    color: #000000;
+    font-size: 20px;
+    min-width: 150px; /* Ensures alignment */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skills-category h2 {
+        font-size: 24px;
+    }
+    
+    .skill-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .skill-name {
+        min-width: unset;
+        margin-top: 5px;
+    }
+    
+    .skill-bar {
+        width: 100%;
+    }
+}
 .tab-contents{
     display: none;
 }
 
 .tab-contents.active-tab{
     display: block;
+}
+
+.tab-titles{
+    margin: 10px 0 0px;
+    padding-bottom: 0px;
 }
 
 
@@ -278,123 +402,468 @@ h1 span {
 }
 
 /*Project Section */
+
+/* Projects Title */
+.intro-project {
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    font-size: 55px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Container for the roles */
 .containerForRole {
-    margin-top: 5em;
-    margin-left: 10em;
-    margin-right: 10em;
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-around; 
-    align-items: stretch; 
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 5em;
+    background-color: #FFFBE6;
 }
 
-.boxWdesc{
-    justify-content: center;
+/* Individual Boxes */
+.boxWdesc {
+    height: auto; 
+    width: 80%;
+    align-items: center;
+    margin-top: 2em;
+    margin-left: 5em;
+    margin-bottom: 2em;
+    background-color: #FCCD2A;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 
 .box {
-    box-sizing: border-box;
-    height: 500px;
-    padding: 20px;
-    background-color: #f4f7f4;
-    text-align: center;
-    color: black;
-    border: 3px solid black;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-.title, .description {
-    width: 100%; /* Ensures that title and description fill the width of the box */
-}
-
-.title, .description {
-    width: 100%; /* Makes title and description take full width of the box */
-}
-
-.title {
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 100px; 
-}
-
-
-.description img {
-    display: block;
-    max-width: 100%; /* ensures the image is responsive and fits the container */
-    height: auto; /* maintains the aspect ratio of the image */
-    margin: 0 auto 20px; /* centers the image horizontally */
-}
-
-.description p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
-    padding: 5px;  /* Padding around text for better readability */
+    padding-left: 70px;
 }
 
 .extraDesc {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px;
-    text-align:initial;
-    color: black;
-    border-radius: 10px;
-    font-size: 16px;
-    line-height: 1.4;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-left: 10px;
+    margin-top: 20px;
 }
 
-#titleD{
-    font-size: 22px;
-    font-weight: bolder;
-}
-
-.extraDesc ul {
-    padding-left: 1em;  /* Adjusted for less space */
-    list-style-type: none; /* Removes default bullets */
-}
-
-.extraDesc li {
-    margin-bottom: 1px;
-    position: relative; /* Needed for absolute positioning of the marker */
-}
-
-.extraDesc li::before {
-    content: "✔"; /* Your custom marker */
-    position: absolute;
-    left: -20px; /* Adjust this value to control the distance of the marker from the text */
-    font-size: 16px; /* Adjust the size of the marker if needed */
-}
-
-
-/*Projects - Details */
-.detailed-projects{
-    display: block;
-    margin: 10em;
+/* Title Styling */
+.box .title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    text-align: start;
+    margin-top: 1em;
+    margin-bottom: 0;
     
 }
 
+/* Description Styling */
+.desc-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+    border-radius: 15%;
+}
 
-@media (max-width: 768px) {
-    .containerForRole {
-        flex-direction: column;
+.gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    height: 25vh;  
+}
+
+.giphy-embed {
+    margin-top: 30%;   
+    height: 90%;     
+}
+
+
+.desc-text {
+    margin-top: 0;
+    padding-top: 0;
+    width: 50%;
+    margin-left: 2.5em;
+}
+
+.desc-text p {
+    font-size: 28px;
+    line-height: 1.3;
+    color: #666;
+    margin-bottom: 10px;
+    margin-left: 0.5em;
+}
+
+.desc-text p:first-child {
+    margin-top: 0;
+}
+
+.desc-text a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 0;
+    margin-left: 1em;
+}
+
+.desc-text a:hover {
+    text-decoration: underline;
+}
+
+/* Extra Description Styling */
+.extraDesc #titleD {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.extraDesc ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.extraDesc ul li {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.extraDesc a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.extraDesc a:hover {
+    text-decoration: underline;
+}
+
+/* Hover Effects */
+.boxWdesc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+/* Detailed Project*/
+/* Projects - Details */
+#detailed-projects {
+    display: block;
+    padding: 3em;
+    margin-left: 3em;
+}
+
+.intro-detailed-project{
+    margin-top: 1em;
+    font-size: 55px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#project-instructions{
+    margin-top: 0;
+    font-size: 25px;
+}
+
+.data-science{
+    margin-left: 1.5em;
+    padding: 1em;
+    background-color: #f9f6ea;
+}
+
+.tech-edu{
+    margin-top: 2em;
+    margin-left: 1.5em;
+    padding: 1em;
+    background-color: #f9f6ea;
+}
+
+
+/* Section Titles */
+
+#detailed-projects h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    margin-top: 1.5em;
+    padding-left: 0.5em;
+    color: #333;
+}
+
+#detailed-projects h1 span {
+    color: #007BFF; /* Accent color */
+}
+
+.proj-summary{
+    margin-bottom: 3em;
+    padding-left: 1.5em;
+    font-size: 20px;
+}
+
+/* Modify the project bullet content to align arrow and text */
+.proj-bullet-content summary {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; /* Vertically center the items */
+    cursor: pointer;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+/* Add hover effect to change background color */
+.proj-bullet-content summary:hover {
+    background-color: #FCCD2A; /* Light background on hover */
+}
+
+/* Project Titles Styling */
+.proj-bullet-content summary .project-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    margin-right: 15px; /* Add some space between the title and the description */
+}
+
+/* Project Description Styling */
+.proj-bullet-content summary .project-description {
+    font-size: 1em;
+    color: #666;
+    margin-left: 10px;
+    flex: 1; /* Allow the description text to take up the remaining space */
+}
+
+/* Add the triangle arrow with the ::after pseudo-element */
+.proj-bullet-content summary::before {
+    content: '\25B6'; /* Right-pointing arrow */
+    font-size: 1.2em;
+    margin-left: 15px;
+    margin-right: 1em;
+    transition: transform 0.3s; /* Smooth animation when rotating */
+    transform-origin: center; /* Rotate from the center */
+}
+
+/* Rotate the triangle when the details are open */
+.proj-bullet-details[open] summary::before {
+    transform: rotate(90deg); /* Rotate the arrow to point downward when open */
+}
+
+/* Styling for project details content */
+.proj-desc h4 {
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 2em;
+    color: #007BFF; /* Use an accent color */
+}
+
+/* Project List Layout */
+.proj-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-left: 2.5em;
+}
+
+/* Project Box */
+.proj-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 20px); /* Two columns layout */
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+}
+
+/* Hover effect on project boxes */
+.proj-box:hover {
+    transform: translateY(-5px); /* Lift slightly when hovered */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+}
+
+/* Project Links */
+.proj-box a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* Hover effect for project links */
+.proj-box a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.proj-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    
+    width: 100%; /* Make sure it takes full width of the box */
+}
+
+/* Project BOX Descriptions */
+.proj-title{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.proj-link-desc {
+    font-size: 18px;
+    color: #555;
+    margin: 1em 10px 0px 10px;
+    display: block;
+}
+
+.proj-link-desc li{
+    line-height: 0.7;
+    margin-top: 1em;
+}
+
+/* Project Skills */
+.proj-skill {
+    font-size: 18px;
+    color: #777;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.proj-skill-desc {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 0.85em;
+    color: #777;
+}
+
+.proj-skill-desc li{
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.proj-list-desc{
+    margin: 10px 0 0 20px;
+    font-size: 16px;
+}
+
+.proj-list-desc li {
+    margin-bottom: 8px; 
+    line-height: 1.5; 
+}
+
+
+/* Remove the default bullet points */
+.proj-summary-bullet {
+    list-style: none; /* Completely remove the list style (bullets/discs) */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Additional padding or margin if needed for the individual list items */
+.proj-summary-bullet li {
+    margin-bottom: 40px; /* Adjust the spacing between the list items */
+    position: relative;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .about-col-2 {
+        flex-basis: 55%; /* Adjust slightly for tablet sizes */
     }
-    .boxWdesc {
-        flex-basis: 100%;
-        margin: 10px 0;
-    }
-    .extraDesc {
-        margin-top: 10px;
+
+    .introduction {
+        margin-left: 2em;
     }
 }
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .about-col-2 {
+        margin-top: 20px; /* Add spacing between image and text on smaller screens */
+    }
+
+    .sub-title {
+        font-size: 40px; /* Adjust title size for smaller screens */
+        margin-left: 0;   /* Center the title */
+    }
+
+    .introduction {
+        font-size: 16px;  /* Slightly smaller text for better readability on small screens */
+        margin-left: 0;   /* Center the introduction text */
+        padding: 0 20px;  /* Add padding to ensure text is not too close to the edges */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .boxWdesc {
+        width: 95%; /* Adjust as needed for smaller screens */
+    }
+
+    .desc-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desc-container img,
+    .desc-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .desc-container img {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Additional Mobile Adjustments */
+@media (max-width: 768px) {
+    .proj-box {
+        width: 100%; /* Full width on mobile screens */
+        margin-bottom: 1.5em;
+    }
+
+    .proj-summary {
+        font-size: 1.1em;
+    }
+
+    #detailed-projects h1 {
+        font-size: 2.2em;
+    }
+
+    .proj-bullet-content summary {
+        font-size: 1.2em;
+    }
+}
+
+
 
 
 footer{
     text-align: center;
     padding: 3px;
 }
+
+

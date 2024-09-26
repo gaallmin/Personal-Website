@@ -18,18 +18,17 @@
             <ul>
                 <li><a href="basic.html#about">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="basic.html#cv">CV</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="main-content">
+    <div class="main-content" id="contact">
         <section class="hero">
-            <div class="intro">
+            <div class="intro" >
                 <p class="title">Data Scientist, Tech Educator</p>
                 <h1>Hello,<br> I am <span>Min Jegal</span></h1>
-                <div class="social-links">
+                <div class="social-links" >
                     <a href="https://www.linkedin.com/in/min-jegal-9507a4232/" target="_blank">
                         <i class="devicon-linkedin-plain colored"></i>
                     </a>
@@ -52,58 +51,167 @@
     </div>
 </div>
 <!------------ ABOUT ----------------->
+<!-- ABOUT SECTION -->
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="/static/images/image.jpg" class="about-img">
+                <img src="/static/images/image.jpg" class="about-img" alt="About Image">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p class="introduction">
                     Hello, I am Min Jegal, a Data Scientist and Tech Educator. 
-                    I am passionate about discovering diverse insights from data and sharing them with people to make a better world.<br>
-                    I am interested in reducing inequality by utilizing AI and Data Science.</p>
+                    I am passionate about discovering diverse insights from data and sharing them with people to make a better world.
+                    I am interested in reducing inequality by utilizing AI and Data Science.
+                </p>
                 
+                <!-- Tab Titles -->
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
                     <p class="tab-links" onclick="opentab('Experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('Skills')">Skills</p>
                 </div>
-                <div class="tab-contents active-tab" id="Education">
+
+                <!-- Education Tab Content -->
+                <div class="tab-contents education-content active-tab" id="Education">
                     <ul>
-                        <li><span>Kongju National University</span><br>Computer Education, Applied Mathematics</li>
-                        <li><span>Universidad Carlos III de Madrid</span><br>Data Science and Engineering</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="Experience">
-                    <ul>
-                        <li><span class="company">OUTTA</span><br><span class="title">Chief Operative Officer, Deep Learning Mentor</span><br>2022-Current</li>
-                        <li><span class="company">AI Playground</span><br><span class="title">Founder</span><br>2024-Current</li>
-                        <li><span class="company">Private Tutor</span><br><span class="title">Python Private Tutor</span><br>2023-2024</li>
-                        <li><span class="company">Brebuf College, Toronto Catholic District School Board</span><br><span class="title">Computer Science (Technology) Department Intern Teacher</span><br>2023</li>
-                        <li><span class="company">The Ankh</span><br><span class="title">Data Analyst</span><br>2021-2023</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="Skills">
-                    <ul>
-                        <li><span>Technical Skills</span><br>
-                            <i class="devicon-python-plain"></i> Python<br>
-                            <i class="devicon-pytorch-plain-wordmark"></i> Pytorch<br>
-                            <i class="devicon-pandas-plain"></i> Pandas<br>
-                            <i class="devicon-numpy-plain-wordmark"></i> Numpy<br>
-                            <i class="devicon-streamlit-plain-wordmark"></i> Streamlit<br>
-                            <i class="devicon-cplusplus-plain"></i> C++<br>
-                            <i class="devicon-azuresqldatabase-plain colored"></i> SQL<br>
+                        <li>
+                            <div class="uni-item">
+                                <span class="school">Kongju National University</span>
+                                <span class="degree">Computer Education, Applied Mathematics</span>
+                            </div>
                         </li>
-                        <li><span>Leadership</span></li>
-                        <li><span>Marketing, Communication</span></li>
+                        <li>
+                            <div class="uni-item">
+                                <span class="school">Universidad Carlos III de Madrid</span>
+                                <span class="degree">Data Science and Engineering</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+                <!-- Experience Tab Content -->
+                <div class="tab-contents experience-content" id="Experience">
+                    <ul>
+                        <li>
+                            <div class="experience-item">
+                                <span class="date">2022-Current</span>
+                                <span class="company">OUTTA</span>
+                                <span class="title">Chief Operative Officer, Deep Learning Mentor</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="experience-item">
+                                <span class="date">2024-Current</span>
+                                <span class="company">AI Playground</span>
+                                <span class="title">Founder</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="experience-item">
+                                <span class="date">2023-2024</span>
+                                <span class="company">Private Tutor</span>
+                                <span class="title">Python Private Tutor</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="experience-item">
+                                <span class="date">2023</span>
+                                <span class="company">Brebuf College, Toronto Catholic District School Board</span>
+                                <span class="title">Computer Science (Technology) Department Intern Teacher</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="experience-item">
+                                <span class="date">2021-2023</span>
+                                <span class="company">The Ankh</span>
+                                <span class="title">Data Analyst</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skills Tab Content -->
+                <div class="tab-contents skills-content" id="Skills">
+                    <div class="skills-category">
+                        <h2>Technical Skills</h2>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <i class="devicon-python-plain colored"></i>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-pytorch-plain-wordmark colored"></i>
+                                <span class="skill-name">Pytorch</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-pandas-plain colored"></i>
+                                <span class="skill-name">Pandas</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-numpy-plain-wordmark colored"></i>
+                                <span class="skill-name">Numpy</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-streamlit-plain-wordmark colored"></i>
+                                <span class="skill-name">Streamlit</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-azuresqldatabase-plain colored"></i>
+                                <span class="skill-name">SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-html5-plain colored"></i>
+                                <span class="skill-name">HTML</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-flask-original"></i>
+                                <span class="skill-name">Flask</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-cplusplus-plain colored"></i>
+                                <span class="skill-name">C++</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                
+                    <div class="skills-category">
+                        <h2>Leadership</h2>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <i class="devicon-teamviewer-plain colored"></i>
+                                <span class="skill-name">Team Management</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-communication-plain colored"></i>
+                                <span class="skill-name">Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="skills-category">
+                        <h2>Marketing & Communication</h2>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <i class="devicon-marketing-plain colored"></i>
+                                <span class="skill-name">Digital Marketing</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-communication-plain colored"></i>
+                                <span class="skill-name">Effective Communication</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- End of about-col-2 -->
+        </div> <!-- End of row -->
+    </div> <!-- End of container -->
+</div> <!-- End of about -->
+
 
 <!------------ CV ----------------->
 <div id="cv">
