@@ -193,14 +193,15 @@ h1 span {
     font-size: 60px;
     font-weight: 600;
     margin-top: 0;
-    margin-left: 1em;
+    margin-left: 0.3em;
     color: #F1C40F;
     align-self: flex-start;
 }
 
 .introduction {
     margin-top: 20px;
-    margin-left: 3em; 
+    margin-left: 0.5em; 
+    margin-right: 2em;
     color: #000000; 
     font-size: 22px; 
     line-height: 1.5;
@@ -212,7 +213,7 @@ h1 span {
 .tab-titles{
     display: flex;
     justify-content: flex-start;
-    margin: 10px 0 0px;
+    margin: 10px 0 10px;
     padding-bottom: 0px !important; 
     padding-left: 4em;
 }
