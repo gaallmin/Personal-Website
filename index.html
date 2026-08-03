@@ -24,14 +24,21 @@
                     <li><a href="index.html#cv">CV</a></li>
                 </ul>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
         </div>
     </header>
 
     <div class="main-content" id="contact">
         <section class="hero">
             <div class="intro" >
-                <p class="title">Data Scientist, Tech Educator</p>
+                <p class="title">Data Scientist · ML/LLM Engineer</p>
                 <h1>Hello,<br> I am <span>Min Jegal</span></h1>
+                <a href="#about" class="current-role-badge">
+                    <span class="pulse-dot"></span>
+                    Currently: Data Science Intern, Clinical AI @ <strong>Deciphex</strong>
+                </a>
                 <div class="social-links" >
                     <a href="https://www.linkedin.com/in/min-jegal-9507a4232/" target="_blank">
                         <i class="devicon-linkedin-plain colored"></i>
@@ -51,9 +58,39 @@
         </section>
     </div>
 
-             
+<!------------ IMPACT STATS ----------------->
+<section id="impact">
+    <div class="stats-container">
+        <h2 class="stats-heading">Impact, in numbers</h2>
+        <div class="stats-grid">
+            <div class="stat-tile">
+                <span class="stat-number" data-target="63" data-suffix="%">0%</span>
+                <p>reduction in LLM self-refutations across prompt versions — Deciphex coherency-check pipeline</p>
+            </div>
+            <div class="stat-tile">
+                <span class="stat-number" data-target="81" data-suffix="%">0%</span>
+                <p>accuracy (0.61 F1) on a PyTorch/VGG16 sketch classifier — 2nd place, national hackathon</p>
+            </div>
+            <div class="stat-tile">
+                <span class="stat-number" data-target="900" data-suffix="+">0</span>
+                <p>applicants attracted in 2 weeks via A/B-tested campaigns — OUTTA AI bootcamp</p>
+            </div>
+            <div class="stat-tile">
+                <span class="stat-number" data-target="25" data-suffix="+">0</span>
+                <p>cross-functional teams advised on AI/DT adoption — SK Enmove</p>
+            </div>
+            <div class="stat-tile">
+                <span class="stat-number" data-target="35" data-suffix="%">0%</span>
+                <p>cut in manual reporting time via automated ETL workflows — The Ankh</p>
+            </div>
+            <div class="stat-tile">
+                <span class="stat-number" data-target="20" data-suffix="%">0%</span>
+                <p>increase in course completion &amp; learner satisfaction — OUTTA curriculum</p>
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
 <!------------ ABOUT ----------------->
 <!-- ABOUT SECTION -->
 <div id="about">
@@ -65,11 +102,24 @@
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p class="introduction">
-                    Hello, I am Min Jegal, a Data Scientist and Tech Educator. 
-                    I am passionate about discovering diverse insights from data and sharing them with people to make a better world.
+                    Hello, I am Min Jegal, a Data Scientist and ML/LLM Engineer.
+                    I am passionate about discovering diverse insights from data, building reliable AI pipelines, and sharing what I learn to make a better world.
                     I am interested in reducing inequality by utilizing AI and Data Science.
                 </p>
-                
+
+                <div class="current-role-card">
+                    <span class="role-badge">Current Role</span>
+                    <h3>Data Science Intern — Clinical AI / Skin AI <span class="role-company">@ Deciphex</span></h3>
+                    <p>Own an LLM-based coherency-check QA pipeline that flags inconsistencies in finalised histopathology reports, running in Deciphex's production post-authorisation pipeline on AWS Bedrock. Design reproducible evaluation experiments, build a gold-standard evaluation dataset, and work directly with pathologists on computational-pathology feature annotation — inside a regulated environment (EU AI Act, ISO 42001/27001, GDPR, MDR).</p>
+                    <div class="role-tags">
+                        <span>LLM Evaluation</span>
+                        <span>AWS Bedrock</span>
+                        <span>Prompt Engineering</span>
+                        <span>Computational Pathology</span>
+                        <span>Regulated ML</span>
+                    </div>
+                </div>
+
                 <!-- Tab Titles -->
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
@@ -83,19 +133,22 @@
                         <li>
                             <div class="uni-item">
                                 <span class="school">University College Dublin</span>
-                                <span class="degree">M.Sc. in Data and Computatioinal Science</span>
+                                <span class="edu-date">Sept 2025 – Sept 2026</span>
+                                <span class="degree">M.Sc. in Data and Computational Science — applying advanced ML to evaluate and improve AI model reliability; elected Class Representative for 300+ peers</span>
                             </div>
                         </li>
                         <li>
                             <div class="uni-item">
                                 <span class="school">Universidad Carlos III de Madrid</span>
-                                <span class="degree">B.Sc. in Data Science and Engineering (1 Year Exchange)</span>
+                                <span class="edu-date">Aug 2023 – Aug 2024</span>
+                                <span class="degree">Exchange, B.Sc. in Data Science and Engineering — statistical modelling, optimisation, and data visualisation</span>
                             </div>
                         </li>
                         <li>
                             <div class="uni-item">
                                 <span class="school">Kongju National University</span>
-                                <span class="degree">B.Sc. in Computer Education, Applied Mathematics</span>
+                                <span class="edu-date">Mar 2021 – Feb 2025</span>
+                                <span class="degree">B.Sc. in Computer Education, Applied Mathematics — First-Class Honours (1:1)</span>
                             </div>
                         </li>
                     </ul>
@@ -103,51 +156,12 @@
 
                 <!-- Experience Tab Content -->
                 <div class="tab-contents experience-content" id="Experience">
-                    <ul>
-                        <li>
-                            <div class="experience-item">
-                                <span class="date">2025</span>
-                                <span class="company">SK (SK Enmove)</span>
-                                <span class="title">Project Intern</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="experience-item">
-                                <span class="date">2024-2025</span>
-                                <span class="company">AI Playground</span>
-                                <span class="title">Founder</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="experience-item">
-                                <span class="date">2022-2024</span>
-                                <span class="company">OUTTA</span>
-                                <span class="title">Chief Operative Officer, Deep Learning Mentor</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="experience-item">
-                                <span class="date">2023-2024</span>
-                                <span class="company">Private Tutor</span>
-                                <span class="title">Python Private Tutor</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="experience-item">
-                                <span class="date">2023</span>
-                                <span class="company">Brebuf College, Toronto Catholic District School Board</span>
-                                <span class="title">Computer Science (Technology) Department Intern Teacher</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="experience-item">
-                                <span class="date">2021-2023</span>
-                                <span class="company">The Ankh</span>
-                                <span class="title">Data Analyst</span>
-                            </div>
-                        </li>
-                    </ul>
+                    <p class="timeline-hint">Click a node to see achievements and metrics for that role.</p>
+                    <div class="timeline" id="career-timeline">
+                        <div class="timeline-track"></div>
+                        <div class="timeline-nodes" id="timeline-nodes"></div>
+                    </div>
+                    <div class="timeline-detail" id="timeline-detail"></div>
                 </div>
 
                 <!-- Skills Tab Content -->
@@ -191,11 +205,35 @@
                                 <i class="devicon-cplusplus-plain colored"></i>
                                 <span class="skill-name">C++</span>
                             </div>
+                            <div class="skill-item">
+                                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                                <span class="skill-name">AWS (Bedrock)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-tensorflow-original colored"></i>
+                                <span class="skill-name">TensorFlow</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-git-plain colored"></i>
+                                <span class="skill-name">Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-emoji" aria-hidden="true">🤖</span>
+                                <span class="skill-name">LLM / Prompt Engineering</span>
+                            </div>
                         </div>
                     </div>
-                
-                
-                
+
+                    <div class="skills-category skill-chart-category">
+                        <h2>Core Competency Radar</h2>
+                        <p class="chart-hint">Hover or tap a point to see the projects behind it.</p>
+                        <div id="skill-radar" class="skill-radar" role="img" aria-label="Radar chart of skill proficiency across five categories"></div>
+                        <div id="skill-radar-detail" class="skill-radar-detail">
+                            <p>Select a skill above to see related work.</p>
+                        </div>
+                    </div>
+
+
                     <div class="skills-category">
                         <h2>Leadership</h2>
                         <div class="skills-list">
@@ -273,7 +311,8 @@
 </script>
 
 <footer>
-    <p>© 2024 by Min Jegal. Proudly created with dedication.</p>
+    <p>© 2026 by Min Jegal. Proudly created with dedication.</p>
 </footer>
+<script src="static/scripts.js"></script>
 </body>
 </html>

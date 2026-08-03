@@ -25,6 +25,9 @@
                     <li><a href="index.html#cv">CV</a></li>
                 </ul>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
         </div>
     </header>
 <!--Job descrption-->
@@ -38,7 +41,11 @@
                 <div class="description">
                     <div class="desc-container">
                         <div class="gif">
-                            <iframe src="https://giphy.com/embed/dtB7kgF86VwZWY5Iee" frameBorder="0" class="giphy-embed"></iframe>
+                            <div class="visual-badge" aria-hidden="true">
+                                <span class="visual-badge-icon">📊</span>
+                                <span class="visual-badge-number">63%</span>
+                                <span class="visual-badge-label">fewer LLM errors shipped @ Deciphex</span>
+                            </div>
                         </div>
                         <div class="desc-text">
                             <p>I am passionate about providing personalized services and analysis by utilizing Data and Deep Learning Models</p>
@@ -68,7 +75,11 @@
                 <div class="description">
                     <div class="desc-container">
                         <div class="gif">
-                            <iframe src="https://giphy.com/embed/lQPHNPMPZ7tcIwseGn"  frameBorder="0" class="giphy-embed"></iframe>
+                            <div class="visual-badge" aria-hidden="true">
+                                <span class="visual-badge-icon">🎓</span>
+                                <span class="visual-badge-number">300+</span>
+                                <span class="visual-badge-label">students taught across 3 countries</span>
+                            </div>
                         </div>
                         <div class="desc-text">
                             <p>My passion for leveraging to address critical issues in education led me to be devoted to providing Tech Education</p>
@@ -98,12 +109,49 @@
 <div id="detailed-projects">
     <div class="intro-detailed-project">Detailed Projects</div>
     <p id="project-instructions">Click the toggle to look up on my projects. When you click the box, you will be guided to the related page😃 </p>
+
+    <div class="project-filter-bar" id="project-filter-bar" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="llm">LLM &amp; Clinical AI</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="leadership">Leadership</button>
+        <button class="filter-btn" data-filter="cloud">Data &amp; Cloud</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+    </div>
+
     <div class="data-science">
         <h1 id="data-science-section">My work in <span>Data Science</span></h1>
         <p class="proj-summary">Passionate about leveraging data to drive innovation, lead international projects, and harness big data technologies for strategic decision-making.</p>
         <ul class="proj-summary-bullet">
+            <!--LLM / Clinical AI project-->
+            <li data-tags="llm,ml">
+                <details class="proj-bullet-content">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="project-title">LLM Coherency-Check Pipeline (Clinical AI)</span>
+                            <span class="project-description">Own an LLM-based QA pipeline at Deciphex that flags internal inconsistencies in finalised histopathology reports, running in production on AWS Bedrock.</span>
+                        </div>
+                    </summary>
+                    <div class="proj-desc">
+                        <h4>Deciphex — Data Science Intern, Clinical AI / Skin AI</h4>
+                        <div class="proj-list">
+                            <div class="proj-box">
+                                <ul class="proj-list-desc">
+                                    <li>Reduced self-refutations ~63% across prompt versions (baseline → v2.1) through decision-first (existence-before-severity) reasoning design</li>
+                                    <li>Cut low-severity flags from 32 → 14 with a gate-based reasoning frame, removing a post-hoc rationalisation escape hatch</li>
+                                    <li>Built a reproducible evaluation harness with strict vs. detected recall metrics to isolate routing errors from detection failures</li>
+                                    <li>Diagnosed false-positive families to missing input fields (pipeline fixes) rather than model reasoning (prompt fixes), and improved synthetic specificity false-positive rate from ~90% to ~24%</li>
+                                    <li>Ran feature-decomposition annotation sessions with subspecialist pathologists (lymphovascular invasion, nevus maturation, pigment-distribution signatures)</li>
+                                </ul>
+                                <span class="proj-skill">Applied Technologies: AWS Bedrock (Claude Sonnet/Opus-class), prompt engineering, multi-stage LLM architectures, evaluation harness design, computational pathology annotation</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </li>
+
             <!--ML/AI project-->
-            <li>
+            <li data-tags="ml">
                 <details class="proj-bullet-content">
                     <summary>
                         <div class="summary-content">
@@ -179,7 +227,7 @@
                 </details>
             </li>
 
-            <li>
+            <li data-tags="leadership">
                 <!--Leadership-->
                 <details class="proj-bullet-content">
                     <summary>
@@ -231,7 +279,7 @@
             </li>
 
             <!--data base-->
-            <li>
+            <li data-tags="cloud">
                 <!--Leadership-->
                 <details class="proj-bullet-content">
                     <summary>
@@ -265,7 +313,7 @@
         <p class="proj-summary">From redefining traditional success to co-founding a global AI education initiative, I am dedicated to empowering individuals through technology education and using AI to drive social change.</p>
         <ul class="proj-summary-bullet">
             <!--NGO project-->
-            <li>
+            <li data-tags="leadership,education">
                 <details class="proj-bullet-content">
                     <summary>
                         <div class="summary-content">
@@ -302,7 +350,7 @@
                 </details>                        
             </li>
 
-            <li>
+            <li data-tags="education">
                 <details class="proj-bullet-content">
                     <summary>
                         <div class="summary-content">
@@ -341,6 +389,7 @@
 </div>
 
 <footer>
-    <p>© 2024 by Min Jegal. Proudly created with dedication.</p>
+    <p>© 2026 by Min Jegal. Proudly created with dedication.</p>
 </footer>
+<script src="static/scripts.js"></script>
 </body>
